@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html data-ng-app="">
+	<head>
+		<title>AngularJS Directive, Data Binding and Filter</title>
+	</head>
+
+<body data-ng-init="classmates=[{name:'Lulen',age:'18',address:'Macabalan'},
+	{name:'Rey',age:'20',address:Tagoloan}, {name:'Pat',age:'21',address:'Indahag'}, {name:'Ryan',age:'22',address:'Lapasan'}]">
+
+	<h3>AngularJS Data Binding, Directives and Filter</h3>
+
+	Name: <br/>
+	<input type="text" data-ng-model="name"/> {{name}}
+
+		<ul>
+			<li data-ng-repeat="mates in classmates | filter:name">{{mates.name + ' - ' + mates.age + ' - ' + mates.address}}</li>
+		</ul>
+
+	<script src="angular.min.js"></script>
+
+</body>
+</html>
